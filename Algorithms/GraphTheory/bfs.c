@@ -11,7 +11,7 @@
 int **graph;
 int *distances;
 
-/* Recursive function that performs breadth-first and updates distances
+/* Recursive function that performs breadth-first search and updates distances
    appropriately.
 */
 void bfs(int s_vertex, int vertices);
@@ -32,7 +32,7 @@ int main(){
     }
     for (j = 0; j < edges; j++) {
       scanf("%d %d", &v1, &v2);
-      v1--;  // remove if vertices start at 0
+      v1--;  // Remove if vertices start at 0
       v2--;
 
       graph[v1][v2] = 1;
@@ -41,7 +41,7 @@ int main(){
 
     // Get start vertex
     scanf("%d", &start);
-    start--;  // remove if vertices start at 0
+    start--;  // Remove if vertices start at 0
 
     // Initialize distances array
     distances = (int *) malloc(vertices*sizeof(int));
